@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div align="center">
+
+		<form>
+			<input type="text" id="display" class="text-box">
+		</form>
+		<table >
+			<tr>
+				<td colspan="3" onclick="add(clear)"><button class="c-btn">c</button></td>
+				<td onclick="add(modulo)"><button class="btn">%</button></td>
+			</tr>
+
+			<tr>
+				<td onclick="add('7')"><button class="btn">7</button></td>
+				<td onclick="add('8')"><button class="btn">8</button></td>
+				<td onclick="add('9')"><button class="btn">9</button></td>
+				<td onclick="add(div)"><button class="btn">/</button></td>
+			</tr>
+
+			<tr>
+				<td onclick="add('4')"><button class="btn">4</button></td>
+				<td onclick="add('5')"><button class="btn">5</button></td>
+				<td onclick="add('6')"><button class="btn">6</button></td>
+				<td onclick="add(multi)"><button class="btn">*</button></td>
+			</tr>
+
+			<tr>
+				<td onclick="add('1')"><button class="btn">1</button></td>
+				<td onclick="add('2')"><button class="btn">2</button></td>
+				<td onclick="add('3')"><button class="btn">3</button></td>
+				<td onclick="add(sub)"><button class="btn">-</button></td>
+			</tr>
+
+			<tr>
+				<td onclick="add('0')"><button class="btn">0</button></td>
+				<td onclick="add('.')"><button class="btn">.</button></td>
+				<td  onclick="add(add)"><button class="btn" >+</button></td>
+				<td onclick="add('equal')"><button class="btn">=</button></td>
+			</tr>
+			
+		</table>
+
+	</div>
+</body>
+</html>
+
+<script>
+		function add(char) {
+		var display = document.getElementById('display');
+		display.value = display.value + char
+	}
+
+	function sub(char) {
+		var display = document.getElementById('display');
+		display.value = display.value - char
+	}
+
+	function multi(char) {
+		var display = document.getElementById('display');
+		display.value = display.value * char
+	}
+
+	function div(char) {
+		var display = document.getElementById('display');
+		display.value = display.value / char
+	}
+
+	function cal(char) {
+		var display = document.getElementById('display');
+		var result = eval(display.value);
+		document.getElementById('result').value = result;
+	}
+
+	function clear(char) {
+		document.getElementById('display').value="";
+		document.getElementById('result').value="";
+	}
+
+	function equal(char) {
+		var display = document.getElementById('display');
+		var result = eval(display.value);
+		document.getElementById('display').value= var display;
+		document.getElementById('result').value= var result;
+	}
+
+</script>

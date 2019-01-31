@@ -1,0 +1,30 @@
+body{
+	background: dodgerblue;
+}
+
+div{
+	margin-top: 7%;
+}
+
+.btn{
+	margin:2px;
+	font-size: 25px;
+	height: 50px;
+	width: 50px;
+}
+
+.zero-btn{
+	height: 50px;
+	font-size: 25px;
+	width: 110px;
+}
+.c-btn{
+	height: 50px;
+	font-size: 25px;
+	width: 170px;
+}
+.text-box{
+	width: 250px;
+	height: 50px;
+	font-size: 25px;
+}
